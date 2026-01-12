@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Mao: Solo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Challenge Select Screen -->
+    <div id="challenge-screen" class="screen active">
+        <button id="instructions-btn" class="instructions-btn">?</button>
+        <h1>Game of Mao: Solo</h1>
+        <p class="subtitle">Discover the hidden rules through trial and error</p>
+        <div id="challenge-grid" class="challenge-grid">
+            <!-- Challenge tiles will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Play Screen -->
+    <div id="play-screen" class="screen">
+        <div class="top-right-buttons">
+            <button id="back-btn" class="back-btn">Back to Challenges</button>
+            <button id="instructions-btn-play" class="instructions-btn">?</button>
+        </div>
+        
+        
+        <div class="game-stats">
+            <div class="stat">
+                <span class="stat-label">Challenge:</span>
+                <span id="challenge-number">1</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Legal Plays:</span>
+                <span id="legal-plays-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Penalties:</span>
+                <span id="penalties-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Cards in Hand:</span>
+                <span id="hand-count">0</span>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div class="discard-pile">
+                <h3>Discard Pile</h3>
+                <div id="discard-pile-card" class="pile-card empty">
+                    <span>No cards yet</span>
+                </div>
+            </div>
+
+            <div class="deck-section">
+                <h3>Deck</h3>
+                <div class="deck-stack">
+                    <div class="deck-card-layer layer-3"></div>
+                    <div class="deck-card-layer layer-2"></div>
+                    <button id="draw-btn" class="deck-card-layer layer-1">
+                        <span class="draw-text">Draw</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hand-section">
+            <h3>Your Hand</h3>
+            <div id="hand" class="hand">
+                <!-- Hand cards will be inserted here -->
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+        <div id="win-modal" class="modal">
+            <div class="modal-content">
+                <h2>Challenge Complete!</h2>
+                <p id="win-message"></p>
+                <button id="next-challenge-btn" class="modal-btn">Next Challenge</button>
+                <button id="back-to-menu-btn" class="modal-btn secondary">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructions Modal -->
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content instructions-content">
+            <button id="close-instructions-btn" class="close-btn">×</button>
+            <h2>How to Play</h2>
+            <div class="instructions-text">
+                <p><strong>Game of Mao: Solo</strong> is a puzzle card game where you must discover hidden rules through trial and error.</p>
+                
+                <h3>Objective</h3>
+                <p>Each challenge has a goal: make a certain number of legal plays or empty your hand.</p>
+                
+                <h3>Gameplay</h3>
+                <ul>
+                    <li><strong>Play a Card:</strong> Click a card from your hand to attempt to play it on the discard pile</li>
+                    <li><strong>Legal Play:</strong> If your play follows all hidden rules, it's successful</li>
+                    <li><strong>Illegal Play:</strong> If you break a rule, you get a penalty and draw a card</li>
+                    <li><strong>Draw:</strong> Click "Draw Card" if you can't or don't want to play</li>
+                </ul>
+                
+                <h3>The Challenge</h3>
+                <p>The rules are <strong>hidden</strong>. You must learn them by observing which plays succeed and which fail. Pay attention to:</p>
+                <ul>
+                    <li>Card suits and ranks</li>
+                    <li>Card colors (red vs black)</li>
+                    <li>Sequences and patterns</li>
+                </ul>
+                
+                <h3>Winning</h3>
+                <p>Complete the goal before exceeding the maximum penalties.</p>
+                
+                <h3>Challenge Colors</h3>
+                <ul>
+                    <li><span style="color: #4CAF50;">●</span> <strong>Green:</strong> Easy puzzles</li>
+                    <li><span style="color: #FF9800;">●</span> <strong>Orange:</strong> Medium puzzles</li>
+                    <li><span style="color: #F44336;">●</span> <strong>Red:</strong> Hard puzzles</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

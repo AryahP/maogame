@@ -1,0 +1,192 @@
+[
+  {
+    "id": "easy-1",
+    "level": 1,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 5,
+      "maxPenalties": 10
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      }
+    ]
+  },
+  {
+    "id": "easy-2",
+    "level": 1,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 8,
+      "maxPenalties": 12
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "7",
+        "requiredColor": "red"
+      }
+    ]
+  },
+  {
+    "id": "easy-3",
+    "level": 1,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 6,
+      "maxPenalties": 10
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_RANK_ON_COLOR",
+        "forbiddenRank": "A",
+        "onColor": "red"
+      }
+    ]
+  },
+  {
+    "id": "medium-1",
+    "level": 2,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 10,
+      "maxPenalties": 8
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_SAME_SUIT_AS_PREV"
+      }
+    ]
+  },
+  {
+    "id": "medium-2",
+    "level": 2,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 12,
+      "maxPenalties": 10
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_RANK_ON_COLOR",
+        "forbiddenRank": "K",
+        "onColor": "black"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "2",
+        "requiredColor": "black"
+      }
+    ]
+  },
+  {
+    "id": "medium-3",
+    "level": 2,
+    "goal": {
+      "type": "LEGAL_PLAYS",
+      "count": 10,
+      "maxPenalties": 9
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_RANK_ON_COLOR",
+        "forbiddenRank": "J",
+        "onColor": "red"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "5",
+        "requiredColor": "red"
+      }
+    ]
+  },
+  {
+    "id": "hard-1",
+    "level": 3,
+    "goal": {
+      "type": "EMPTY_HAND",
+      "maxPenalties": 15
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_SAME_SUIT_AS_PREV"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "A",
+        "requiredColor": "black"
+      }
+    ]
+  },
+  {
+    "id": "hard-2",
+    "level": 3,
+    "goal": {
+      "type": "EMPTY_HAND",
+      "maxPenalties": 12
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_SAME_SUIT_AS_PREV"
+      },
+      {
+        "type": "FORBID_RANK_ON_COLOR",
+        "forbiddenRank": "Q",
+        "onColor": "red"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "J",
+        "requiredColor": "red"
+      }
+    ]
+  },
+  {
+    "id": "hard-3",
+    "level": 3,
+    "goal": {
+      "type": "EMPTY_HAND",
+      "maxPenalties": 10
+    },
+    "rules": [
+      {
+        "type": "BASE_MATCH_SUIT_OR_RANK"
+      },
+      {
+        "type": "FORBID_SAME_SUIT_AS_PREV"
+      },
+      {
+        "type": "FORBID_RANK_ON_COLOR",
+        "forbiddenRank": "K",
+        "onColor": "black"
+      },
+      {
+        "type": "AFTER_RANK_REQUIRE_COLOR",
+        "afterRank": "10",
+        "requiredColor": "black"
+      }
+    ]
+  }
+]
